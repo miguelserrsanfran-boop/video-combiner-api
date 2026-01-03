@@ -61,33 +61,40 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=port)
 ```
 
-3. Click **"Commit changes"** (botón verde arriba a la derecha)
-
 ---
 
-### **ARCHIVO 2: requirements.txt**
+# **ARCHIVO 2**
 
-1. Click aquí:
-```
-https://github.com/miguelserrsanfran-boop/video-combiner-api/new/main?filename=requirements.txt
-```
+**Nombre:** `requirements.txt`
 
-2. Pega:
+**Pasos:**
+1. "Add file" → "Create new file"
+2. Escribe: `requirements.txt`
+3. Copia y pega estas 3 líneas
+4. Commit changes
+
+**Contenido completo:**
 ```
 flask==3.0.0
 flask-cors==4.0.0
 requests==2.31.0
 ```
 
-3. Click **"Commit changes"**
-
 ---
 
-### **ARCHIVO 3: Dockerfile**
+# **ARCHIVO 3**
 
-1. Click aquí:
+**Nombre:** `Dockerfile` (con D mayúscula, sin extensión)
+
+**Pasos:**
+1. "Add file" → "Create new file"
+2. Escribe exactamente: `Dockerfile`
+3. Copia y pega todo el código
+4. Commit changes
+
+**Contenido completo:**
 ```
-  FROM python:3.11-slim
+FROM python:3.11-slim
 
 RUN apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
 
@@ -101,4 +108,3 @@ COPY app.py .
 EXPOSE 5000
 
 CMD ["python", "app.py"]
-https://github.com/miguelserrsanfran-boop/video-combiner-api/new/main?filename=Dockerfile
