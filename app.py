@@ -52,11 +52,10 @@ def combine_video_audio():
 def health():
     return jsonify({'status': 'ok'})
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods={'GET'])
 def home():
     return jsonify({'service': 'Video Combiner API', 'status': 'running'})
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
-```
